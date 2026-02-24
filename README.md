@@ -1,6 +1,6 @@
 # Clara's Supreme Toolkit v1.0 (Universal Edition) 🚀
 
-Toolkit monitoring hardware Windows yang ringan, akurat, dan otomatis. Dirancang khusus untuk memantau suhu Core i5-1035G4 dan hardware lainnya secara real-time.
+Toolkit monitoring hardware Windows yang ringan, akurat, dan otomatis. Dirancang khusus untuk memantau suhu Core dan hardware lainnya secara real-time.
 
 ### ✨ Fitur Utama:
 - **Real-Time CPU Temp**: Menggunakan OpenHardwareMonitorLib untuk akurasi tinggi.
