@@ -9,7 +9,6 @@ title CLARA'S SUPREME TOOLKIT v1.0 - UNIVERSAL AUTO-DETECT
 color 0b
 
 :: --- 2. AMBIL DATA HARDWARE (AUTO-DETECT MODEL) ---
-:: Sekarang Model Laptop diambil otomatis, bukan tulisan manual lagi!
 for /f "delims=" %%a in ('powershell -command "(Get-CimInstance Win32_ComputerSystem).Model"') do set "v_model=%%a"
 for /f "delims=" %%a in ('powershell -command "(Get-CimInstance Win32_ComputerSystem).Manufacturer"') do set "v_brand=%%a"
 for /f "delims=" %%a in ('powershell -command "(Get-CimInstance Win32_BIOS).SMBIOSBIOSVersion"') do set "bios=%%a"
@@ -36,7 +35,7 @@ echo    Model RAM    : %ram_m%
 echo    Model SSD    : %ssd_m%
 echo.
 
-:: --- 3. RAKIT MESIN SENSOR v12.0 (STABIL) ---
+:: --- 3. RAKIT MESIN SENSOR v1.0 (STABIL) ---
 echo $path = Join-Path $pwd 'OpenHardwareMonitorLib.dll' > engine.ps1
 echo function DrawBar($p){ $d=[math]::Floor($p*15/100); return "["+("#"*$d)+("-"*(15-$d))+"]" } >> engine.ps1
 echo Unblock-File $path -ErrorAction SilentlyContinue >> engine.ps1
@@ -88,4 +87,5 @@ echo.
 echo [CLARA] Menghitung waktu nyala laptop...
 powershell -Command "Write-Host 'Laptop kamu sudah nyala selama:' (New-TimeSpan -Start (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -End (Get-Date)).ToString('dd\ \h\a\r\i\,\ hh\ \j\a\m\,\ mm\ \m\e\n\i\t')"
 pause
+
 goto menu
